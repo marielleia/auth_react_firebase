@@ -44,7 +44,7 @@ export function Login() {
     if (!user.email) return setError("Please enter your email address");
     try {
       await resetPassword(user.email);
-      setError("We sent you an email with a link to reset your password.")
+      setError("We sent you an email with a link to reset your password.");
     } catch (error) {
       setError(error.message);
     }

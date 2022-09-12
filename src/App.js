@@ -11,11 +11,14 @@ export default function App() {
     <div className="bg-slate-300 h-screen text-black flex">
       <AuthProvider>
         <Routes>
-          <Route path="/" element={
-          <ProtectedRoute>
-          <Home />
-          </ProtectedRoute>
-          } />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
